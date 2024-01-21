@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>confirmation</title>
+    <link rel="stylesheet" href="./styles/fonts.css">
+    <style>
+        body{
+            background-color: hsl(235, 18%, 26%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;;
+            }
+        main{
+            background-color: white;
+            border-radius: 20px;
+            width: 320px;
+            padding: 45px;
+        }
+        img{
+            width: 50px;
+        }
+        h1{
+            font-family: 'Roboto-Bold';
+            color: hsl(234, 29%, 20%);
+            font-size: 40px;
+        }
+
+        p{
+            font-family: 'Roboto-Regular';
+            color: hsl(234, 29%, 20%);
+            font-size: 16px;
+            position: relative;
+            bottom: 10px;
+        }
+
+
+        input{
+        width: 320px;
+        padding: 15px 10px 15px 15px;
+        border-radius: 7px;
+        border: 1px solid;
+        background-color:hsl(234, 29%, 20%);
+        color: white;
+        font-family: 'Roboto-Bold';
+        font-size: 18px;
+        }
+        span{
+            font-family: 'Roboto-Bold'; 
+        }
+        input:hover {
+            background: linear-gradient(45deg, #FF6D4F, #FF4E75);
+            transition: 0.3s all;
+            box-shadow: 9px 9px 10px 3px rgba(244, 85, 85, 0.3);   
+        }
+        
+
+    </style>
+</head>
+<body>
+        <main>
+            <img src="./assets/images/icon-success.svg" alt="icon-success">
+            <h1>Thanks for subscribing!</h1>
+            <p id="confirmationMessage">A confirmation email has been sent to <span id="emailPlaceholder">ash@loremcompany.com</span>.
+                Please open it and click the button inside to confirm your subscription.</p>
+            <input type="submit" value="Dismiss message" onclick="dismissMessage()">        </main>
+        <script>
+            function dismissMessage() {
+                // Adicione aqui a lógica para o que deseja fazer ao clicar no botão Dismiss
+                alert("Mensagem foi dispensada!");
+              }
+          
+              // Obtém o span
+              var emailPlaceholder = document.getElementById('emailPlaceholder');
+          
+              // Obtém o valor do email do localStorage (assumindo que você está armazenando o email)
+              var userEmail = localStorage.getItem('userEmail');
+          
+              // Atualiza o texto do span com o email dinâmico
+              if (userEmail) {
+                emailPlaceholder.textContent = userEmail;
+              }
+              
+          </script>
+</body>
+</html>

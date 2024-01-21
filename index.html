@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/fonts.css">
+  <link rel="stylesheet" href="./styles/media.css">
+  <script src="./script.js" defer></script>
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+<body>
+
+  <main>
+        <div class="formulario">
+          <div class="infos">
+          <h1>Stay updated!</h1>
+          <p>Join 60,000+ product managers receiving monthly updates on:</p>
+          <ul>
+            <li>
+              <img id="icon-list" src="./assets/images/icon-list.svg" alt="icon-list">
+              <p>Product discovery and building what matters
+              </p>
+            </li>
+            <li>
+              <img id="icon-list" src="./assets/images/icon-list.svg" alt="icon-list">
+              <p>Measuring to ensure updates are a success</p>
+            </li>
+            <li>
+              <img id="icon-list" src="./assets/images/icon-list.svg" alt="icon-list">
+              <p>And much more!</p>
+            </li>
+          </ul>
+          </div>
+          <div class="form_section">
+            <div class="e-mail">
+              <p>Email address</p>
+              <p id="p_red">Valid email required</p>
+            </div>
+            <form id="myForm" onsubmit="return validateForm()">
+              <input id="email" type="email" placeholder="email@company.com" oninput="validateEmail()">
+             <input  id="submit" type="submit" value="Subscribe to monthly newsletter">
+            </form>
+          </div>
+      </div>
+     
+        <img class="logo" id="imagem_lateral" src="./assets/images/illustration-sign-up-desktop.svg" alt="imagem lateral">
+        <img class="logo-mobile" src="./assets/images/illustration-sign-up-mobile.svg" alt="Logo Mobile">
+ 
+  </main>
+  <!--<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>. -->
+</body>
+</html>

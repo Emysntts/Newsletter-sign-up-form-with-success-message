@@ -1,0 +1,34 @@
+@media screen and (max-width: 760px){
+    * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+    border{ 
+        margin: 0;
+    }
+    header{
+        flex-direction: column;
+    }
+
+    main{
+        flex-direction: column-reverse;
+        width: 100%;
+        height: auto;
+        padding: 0;
+    }
+    .logo {
+        display: none; /* Esconde a imagem desktop por padrão em dispositivos móveis */
+      }
+    
+      /* Adicione a imagem móvel e mostre apenas em dispositivos móveis */
+      .logo-mobile {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+
+      #submit{
+        width: 355px; 
+        align-items: center;
+    }
+}
