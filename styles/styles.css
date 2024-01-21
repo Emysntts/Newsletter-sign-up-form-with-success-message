@@ -115,6 +115,12 @@ color: hsl(4, 100%, 67%);
     font-size: 15px;
 }
 
+#submit:hover{
+        background: linear-gradient(45deg, #FF6D4F, #FF4E75);
+        transition: 0.3s all;
+        box-shadow: 9px 9px 10px 3px rgba(244, 85, 85, 0.3);   
+}
+
 .logo-mobile{
     display: none;
 }
