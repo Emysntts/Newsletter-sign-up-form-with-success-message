@@ -66,24 +66,23 @@
             <h1>Thanks for subscribing!</h1>
             <p id="confirmationMessage">A confirmation email has been sent to <span id="emailPlaceholder">ash@loremcompany.com</span>.
                 Please open it and click the button inside to confirm your subscription.</p>
-            <input type="submit" value="Dismiss message" onclick="dismissMessage()">        </main>
+            <input type="submit" value="Dismiss message" onclick="dismissMessage()">
+        </main>
+
         <script>
-            function dismissMessage() {
-                // Adicione aqui a lógica para o que deseja fazer ao clicar no botão Dismiss
-                alert("Mensagem foi dispensada!");
-              }
-          
-              // Obtém o span
-              var emailPlaceholder = document.getElementById('emailPlaceholder');
-          
-              // Obtém o valor do email do localStorage (assumindo que você está armazenando o email)
-              var userEmail = localStorage.getItem('userEmail');
-          
-              // Atualiza o texto do span com o email dinâmico
-              if (userEmail) {
-                emailPlaceholder.textContent = userEmail;
-              }
-              
-          </script>
+    function dismissMessage() {
+      alert("Mensagem foi dispensada!");
+    }
+    // Obtém o span
+    var emailPlaceholder = document.getElementById('emailPlaceholder');
+
+    // Obtém o valor do email do localStorage (assumindo que você está armazenando o email)
+    var userEmail = localStorage.getItem('userEmail');
+
+    // Atualiza o texto do span com o email dinâmico
+    if (userEmail) {
+      emailPlaceholder.textContent = userEmail;
+    }              
+    </script>
 </body>
 </html>
