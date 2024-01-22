@@ -70,19 +70,26 @@
         </main>
 
         <script>
-    function dismissMessage() {
-      alert("Mensagem foi dispensada!");
-    }
-    // Obtém o span
-    var emailPlaceholder = document.getElementById('emailPlaceholder');
-
-    // Obtém o valor do email do localStorage (assumindo que você está armazenando o email)
-    var userEmail = localStorage.getItem('userEmail');
-
-    // Atualiza o texto do span com o email dinâmico
-    if (userEmail) {
-      emailPlaceholder.textContent = userEmail;
-    }              
-    </script>
-</body>
+            // Função para ser chamada ao carregar a página de confirmação
+            function updateEmailPlaceholder() {
+              var emailPlaceholder = document.getElementById('emailPlaceholder');
+          
+              // Recuperar o email do localStorage
+              var storedEmail = localStorage.getItem('userEmail');
+          
+              // Verificar se há um email armazenado e atualizar o conteúdo do span
+              if (storedEmail) {
+                emailPlaceholder.textContent = storedEmail;
+              }
+            }
+          
+            // Chamada à função ao carregar a página de confirmação
+            updateEmailPlaceholder();
+            function dismissMessage() {
+            // Implemente a lógica para fechar ou dismiss a mensagem
+            console.log('Mensagem dispensada');
+            }
+        </script>
+        
+          </body>
 </html>
