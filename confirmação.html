@@ -70,8 +70,8 @@
         </main>
 
         <script>
-            // Função para ser chamada ao carregar a página de confirmação
-            function updateEmailPlaceholder() {
+            document.addEventListener('DOMContentLoaded', function () {
+                function updateEmailPlaceholder() {
               var emailPlaceholder = document.getElementById('emailPlaceholder');
           
               // Recuperar o email do localStorage
@@ -82,9 +82,9 @@
                 emailPlaceholder.textContent = storedEmail;
               }
             }
-          
-            // Chamada à função ao carregar a página de confirmação
             updateEmailPlaceholder();
+            });
+            
             function dismissMessage() {
             // Implemente a lógica para fechar ou dismiss a mensagem
             console.log('Mensagem dispensada');
